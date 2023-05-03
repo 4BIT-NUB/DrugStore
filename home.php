@@ -135,13 +135,14 @@
                 </div>
               ';
             }
-            createSection2('address-card', 'new_invoice.php', 'Create New Invoice');
+      /*  createSection2('address-card', 'new_invoice.php', 'Create New Invoice hasan');
             createSection2('handshake', 'add_customer.php', 'Add New Customer');
             createSection2('shopping-bag', 'add_medicine.php', 'Add New Medicine');
             createSection2('group', 'add_supplier.php', 'Add New Supplier');
             createSection2('bar-chart', 'add_purchase.php', 'Add New Purchase');
             createSection2('book', 'sales_report.php', 'Sales Report');
-            createSection2('book', 'purchase_report.php', 'Purchase Report');
+            createSection2('book', 'purchase_report.php', 'Purchase Report'); */
+		
           ?>
 
         </div>

@@ -28,21 +28,26 @@
           require "php/db_connection.php";
           if($con) {
             $query = "SELECT * FROM admin_credentials";
+		
             $result = mysqli_query($con, $query);
             $row = mysqli_fetch_array($result);
+			
             $pharmacy_name = $row['PHARMACY_NAME'];
             $address = $row['ADDRESS'];
             $email = $row['EMAIL'];
             $contact_number = $row['CONTACT_NUMBER'];
             $username = $row['USERNAME'];
+			$username = $row['PASSWORD'];
+		//	echo $username;die;
           }
         ?>
+		
         <div class="row">
           <div class="row col col-md-6">
 
             <div class="row col col-md-12">
               <div class="col col-md-12 form-group">
-                <label class="font-weight-bold" for="pharmacy_name">Pharmacy Name :</label>
+                <label class="font-weight-bold" for="pharmacy_name">DrugStore Name :</label>
                 <input id="pharmacy_name" type="text" class="form-control" value="<?php echo $pharmacy_name; ?>" placeholder="pharmacy name" onkeyup="validateName(this.value, 'pharmacy_name_error');" disabled>
                 <code class="text-danger small font-weight-bold float-right mb-2" id="pharmacy_name_error" style="display: none;"></code>
               </div>
@@ -79,6 +84,17 @@
                 <code class="text-danger small font-weight-bold float-right mb-2" id="username_error" style="display: none;"></code>
               </div>
             </div>
+			
+			<div class="row col col-md-12">
+              <div class="col col-md-12 form-group">
+                <label class="font-weight-bold" for="username">Password :</label>
+                <input id="username" type="text" class="form-control" value="<?php echo $username; ?>" placeholder="username" onkeyup="notNull(this.value, 'username_error');" disabled>
+                <code class="text-danger small font-weight-bold float-right mb-2" id="username_error" style="display: none;"></code>
+              </div>
+            </div>
+
+
+
 
             <!-- horizontal line -->
             <div class="col col-md-12">

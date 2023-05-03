@@ -4,7 +4,7 @@ function deleteSupplier(id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if(xhttp.readyState = 4 && xhttp.status == 200)
-        document.getElementById('suppliers_div').innerHTML = xhttp.responseText;
+        document.getElementById('suppliers2_div').innerHTML = xhttp.responseText;
     };
     xhttp.open("GET", "php/manage_supplier.php?action=delete&id=" + id, true);
     xhttp.send();
@@ -15,7 +15,7 @@ function editSupplier(id) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(xhttp.readyState = 4 && xhttp.status == 200)
-      document.getElementById('suppliers_div').innerHTML = xhttp.responseText;
+      document.getElementById('suppliers2_div').innerHTML = xhttp.responseText;
   };
   xhttp.open("GET", "php/manage_supplier.php?action=edit&id=" + id, true);
   xhttp.send();
@@ -47,7 +47,7 @@ function cancel() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(xhttp.readyState = 4 && xhttp.status == 200)
-      document.getElementById('suppliers_div').innerHTML = xhttp.responseText;
+      document.getElementById('suppliers2_div').innerHTML = xhttp.responseText;
   };
   xhttp.open("GET", "php/manage_supplier.php?action=cancel", true);
   xhttp.send();
@@ -57,7 +57,7 @@ function searchSupplier(text) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if(xhttp.readyState = 4 && xhttp.status == 200)
-      document.getElementById('suppliers_div').innerHTML = xhttp.responseText;
+      document.getElementById('suppliers2_div').innerHTML = xhttp.responseText;
   };
   xhttp.open("GET", "php/manage_supplier.php?action=search&text=" + text, true);
   xhttp.send();
